@@ -1,0 +1,30 @@
+@page
+@model CastModel
+
+
+<div id="castHeader">
+    <img id="castHeaderProfilePic" src="http://placehold.it/200x200" alt="Cast Pic">
+    <p id="castHeaderProfileName"> Scarlett johansson </p>
+</div>    
+<div id="basicInfo" >
+    <table id="infoTable">
+        <tr>
+            <td>Name:</td>
+            <td>scarlett johansson</td>
+        </tr>
+         <tr>
+            <td>Age:</td>
+            <td>37</td>
+        </tr>
+         <tr>
+            <td>Country:</td>
+            <td>USA</td>
+        </tr>
+    </table>
+</div>
+<div id="photoGallery">
+    @for(int i=0; i < 30; i++)
+    {
+        <img src="https://placehold.it/120x180" alt="gallery pic" + @i>
+    }
+</div>

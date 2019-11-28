@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+
+<!-- Search Results -->
+<div id="searchResults">
+    <form id="searchImage" method="post" asp-page-handler="Details">
+        @for(int i = 0; i < Model.posterPath.Count; i++)
+        {
+            if(Model.posterPath[i] != "")
+            {
+                if(Model.posterPath[i].Length > 4)
+                {
+                    string style = "background: url(https://image.tmdb.org/t/p/w500/" + @Model.posterPath[i] + ");";
+                    style += " background-size: cover; background-position: center;";
+                    style += " width: 18%; display: inline-block; margin: 1%;";
+                    style += " border-radius: 16px; border: 2px solid #444;";
+                    <div name="movieID" value="@Model.id[i]" style="@style">
+                        <input class="thumbBtn" type="submit" name="movieID" value="@Model.id[i]">
+                    </div>
+                }
+            }
+        }
+    </form>
+</div>
+
+<!-- Movie Details -->
+<div id="movieDetails">
+    @if(Model.description.Length > 300)
+    {
+        <p class="movieDesc">@Model.description.Substring(0, 297)...</p>
+    }
+    else
+    {
+        <p class="movieDesc">@Model.description</p>
+    }
+</div>
+
+<!-- Video Output -->
+<div id="video">
+    <div class="frameDiv">
+        @for(int i = 0; i < Model.VidClips.Count; i++)
+        {
+            @if(i < 4)
+            {
+                <iframe src="https://www.youtube.com/embed/@Model.VidClips[i]"
+                    class="frame" frameborder="3" 
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            }
+        }
+    </div>
+</div>
+
+<!-- cast info -->
+<div id="cast">
+    <form method="post" asp-page-handler="Cast">
+        @for(int i=0;i < Model.CastImages.Count; i++)
+        {
+            @if(i < 12)
+            {
+                @if(Model.CastImages[i].Length > 4)
+                {
+                    string cID = Model.CastIDs[i];
+                    string style ="background: url(https://image.tmdb.org/t/p/w500/" + @Model.CastImages[i] + ");";
+
+                    style += "background-size: cover; background-position: center;";
+                    style += "width: 175px; height: 175px; display: inline-block;";
+                    <div name="castID" value="@cID" class="castPic"
+                    style="@style">
+                    <input type="submit" name="castID" class="castBtn" value="@cID"
+                        style="min-width: 175px; min-height: 175px;" />
+                    </div>
+                }
+            }
+        }
+    </form>

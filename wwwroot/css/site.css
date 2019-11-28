@@ -1,0 +1,174 @@
+﻿
+body {
+  background: rgba(255, 255, 255, .21);
+  font-family: 'Baloo', cursive;
+}
+#loginPanel {
+  width: 300px;
+  height: 120px;
+  background: #ccc;
+  position: absolute;
+  z-index: 11;
+  top: -100px;
+  right: 150px;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+  #loginPanel h3 {
+    margin: 1px 21px;
+    cursor: pointer;
+    color: #bb8;
+  }
+  #loginPanel h3:hover {
+    color: #f00;
+  }
+header {
+	background: linear-gradient(to bottom, rgba(10, 108, 138, .07), rgba(10, 108, 138, .03), rgba(10, 108, 138, .03));
+}
+#search {
+  width: 100%;
+  text-align: center;
+}
+  #search input {
+    width: 100%;
+  }
+#logo {
+  width: 100%;
+  height: 150px;
+  background: url('../assets/images/bannerBkg.jpg');
+  background-position-x: -265px;
+  margin-top: -16px;
+}
+  .mkLogo {
+    position: relative;
+    margin-top: -18px;
+    margin-left: 5px;
+    width: 177px;
+  }
+.thumbs {
+  display: inline;
+  min-width: 16%;
+  max-width: 16%;
+  border: 2px solid #222;
+  border-radius: 8px;
+  margin: 1%;
+}
+  .thumbBtn {
+    min-width: 240px; 
+    min-height: 240px; 
+	position: relative; 
+	border-radius: 8px;
+    z-index: 3; 
+	opacity: .01;
+	cursor: pointer;
+  }
+#searchResults {
+  text-align: center;
+  border-radius: 8px;
+  padding: 13px;
+}
+#movieDetails {
+  width: 100%;
+  min-height: 200px;
+  padding: 0 50px;
+}
+    .movieDesc {
+      color: #333; 
+      font-size: 1.5em; 
+	  padding-right: 20px;
+	  font-weight: 300;
+    }
+#video {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+  .frameDiv {
+    display: table;
+    margin: 0 auto;
+  }
+  .frame {
+    width: 300px;
+    margin: 10px;
+	border-radius: 8px;
+	border: 3px solid #444;
+  }
+
+#cast {
+  width: 100%;
+  text-align: center;
+}
+  .castPic {
+    width: 175px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    box-shadow: 4px 6px 6px #999;
+    margin: 10px;
+  }
+  .castBtn{
+    min-width: 175px;
+    min-height: 175px;
+    position: relative;
+    border-radius: 8px;
+    z-index: 4;
+    opacity: .01;
+    cursor: pointer;
+  }
+  /*cast page rules*/
+
+  #castHeader {
+    width: 100%;
+    background: #444;
+    height: 200px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+  }
+    #castHeaderProfilePic {
+      min-width: 20px;
+      min-height: 200px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      position: relative;
+      z-index: 3;
+      margin-top: 50px;
+    }
+    #castHeaderProfileName {
+      width: 300px;
+      margin: 0 auto;
+      font-weight: 600;
+      font-size: 1.3em;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      position: relative;
+      z-index: 4;
+      margin-top: -70px;
+    }
+    #basicInfo {
+      width: 100%;
+      padding-top:  50px;
+      background: #eee;
+    }
+    #infoTable {
+      width: 80%;
+      margin: 0 auto;
+    }
+    #infoTable td{
+      width: 50%;
+    }
+    #photoGallery {
+      width: 100%;
+      background: #ddd;
+      text-align: center;
+    }
+    #photoGallery > img {
+      width: 120px;
+      height: 180px;
+      border: 2px solid #333;
+      margin: 10px;     
+    } 
+footer {
+  padding: 13px 0;
+  text-align: center;
+}

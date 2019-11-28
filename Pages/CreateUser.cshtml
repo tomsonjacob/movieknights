@@ -1,0 +1,10 @@
+@page
+@model CreateUserModel
+
+<div id="createUser">
+    <form id="createUserForm" method="post" asp-page-handler="CreateUser">
+        <input type="email" name="email" placeholder="enter  email"><br>
+        <input type="password" name="password" placeholder="enter  password"><br>
+        <input type="submit" value="create account">
+    </form>
+</div>
